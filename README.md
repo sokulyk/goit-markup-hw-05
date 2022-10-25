@@ -1,2 +1,2 @@
 # goit-markup-hw-05
-Hausaufgabe-5
+Домашняя работа - №5
