@@ -62,6 +62,7 @@ margin-bottom: 20px;
 .links,
 .logo {
   text-decoration: none;
+  transition: 250ms;
 }
 
 /* стиль ссылкок шапка */
@@ -89,6 +90,7 @@ margin-bottom: 20px;
 .current {
   position: relative;
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current::after {
@@ -178,7 +180,7 @@ margin-bottom: 20px;
   margin: 0 auto;
   display: block;
   /* margin: 30px auto 0; */
-  
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-hero:hover {
@@ -337,6 +339,7 @@ h2 {
   border: none;
   padding: 6px 22px;
   cursor: pointer;
+  transition: 250ms;
 }
 
 .btn-filtr.primary {
@@ -350,6 +353,7 @@ h2 {
   background: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* 8. При .btn-filtr:focus мають бути такі ж стилі, як і при ховері */
@@ -377,7 +381,35 @@ h2 {
   max-width: 370px;
    /*отступ между меэлементами списка*/  
    /* cursor: pointer; */
+      
 }
+
+.our-joblist-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.our-joblist-descr {
+position: absolute;
+top: 0;
+left: 0;
+transform: translateY(100%);
+width: 100%;
+height: 294px;
+padding: 63px 24px;
+color: var(--light-main-color);
+background-color: var(--accent-color);
+opacity: 0.9;
+transition: transform 250ms;
+font-size: 18px;
+line-height: 1.56;
+letter-spacing: 0.03em;
+}
+
+.our-joblist-item:hover .our-joblist-descr {
+  transform: translateY(0);
+}
+
 
 /* 37. Для .our-joblist-style h3 задайте нижній марджин */
 
@@ -391,7 +423,7 @@ h2 {
   color: var(--text-main-color);
 }
 
-.our-joblist-item p {
+.our-joblist-par {
   /* имена и профессии команды */
   /* font-weight: 400; */
   font-size: 16px;
@@ -402,9 +434,11 @@ h2 {
 
 .our-joblist-links {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-joblist-links:hover {
+  transition: 250ms;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   }
   
@@ -559,10 +593,33 @@ padding: 200px 0;
 
 /* 19. Для .whatwedo-item приберіть марджин */
 
-.whatwedo-item {
+.whatwedo-list {
   display: flex;
   justify-content: space-between;
   /* margin-top: 50px; */
+}
+
+.whatwedo-item {
+position: relative;
+}
+
+.whatwedo-descr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #2F303A;
+  width: 100%;
+  height: 70px;
+  color: var(--light-main-color);
+  opacity: 0.8;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 20. Для усіх фото задайте
@@ -697,6 +754,7 @@ padding: 60px 0;
   justify-content: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: 250ms;
 }
 
 /*.team-soclink {
@@ -706,10 +764,12 @@ padding: 60px 0;
 
 .socnet-link:hover {
   background-color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
 .socnet-link:hover .socnet-icons-team{
   fill: var(--light-main-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socnet-icons {
@@ -718,7 +778,8 @@ padding: 60px 0;
 
 .socnet-icons-team, .contact-icons, .clients-icons  {
   /* заливаем иконки цветом */
-  fill: var(--icons)
+  fill: var(--icons);
+  transition: 250ms;
 }
 
 
@@ -731,6 +792,7 @@ padding: 60px 0;
 
 .links:hover .contact-icons {
 fill: var(--accent-color);
+transition: 250ms;
 }
 
 /* 1. Для .features-icons приберіть паддинги, задайте розміри і позиціонуйте іконку флексами */
@@ -768,6 +830,7 @@ fill: var(--accent-color);
   justify-content: center;
   border: 1px solid var(--icons);
   border-radius: 4px;
+  transition: 250ms;
 }
 
 /* 4. При .clients-link:hover краще міняйте колір бордеру, а не малюйте його наново */
@@ -775,9 +838,58 @@ fill: var(--accent-color);
 .clients-link:hover {
   /* border: 1px solid var(--accent-color); */
   border-color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .clients-icons {
   fill: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop {
+  position: fixed;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms, visibility 250ms;
 }
 
+  .is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    background-color: var(--light-main-color);
+    /* position: absolute; */
+    /* z-index: 1; */
+  }
+
+  .modal-close-btn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 50%;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .close-icon {
+
+  }
