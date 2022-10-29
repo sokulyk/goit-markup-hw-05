@@ -491,7 +491,7 @@ letter-spacing: 0.03em;
 .header-menu-contacts {
   /* border: 1px solid black; */
   display: flex;
-  align-items: ;
+  /* align-items: ; */
   /* flex-grow: 0; */
   gap: 50px;
   margin-left: auto;
@@ -501,10 +501,10 @@ letter-spacing: 0.03em;
 
 /* 8. Для .main приберіть стилі */
 
-.main {
-  /* width: 1200px; */
-  /* margin: auto; */
-}
+/*.main {
+  width: 1200px;
+  margin: auto;
+}*/
 
 /* секции index.html */
 
@@ -887,6 +887,3 @@ fill: var(--accent-color);
     justify-content: center;
   }
 
-  .close-icon {
-
-  }
